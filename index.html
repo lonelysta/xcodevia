@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="color-scheme" content="light dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+    <title>主页</title>
+    <link rel="stylesheet" href="./style.css">
+    <style></style>
+</head>
+
+<body>
+    <div class='frosted-glass'></div>
+    <div id="content">
+        <div class="search_part"><a class="logo" href="" onclick="window.via.cmd(257);" title="书签">
+
+
+                <!-- 以下是用户HTMl -->
+
+
+
+
+                <div id='time'>></div>
+                <!--下面是随机今日诗词！-->
+                <p id="hitokoto"><a id="hitokoto_text">:D 获取中...</a></p>
+                <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" ; defer></script>
+
+                <script> (function () { function f(i) { return i < 10 ? '0' + i : i; } function s() { const D = new Date(); document.getElementById('time').innerHTML = f(D.getHours()) + ':' + f(D.getMinutes()) } s(); setInterval(function () { s(); }, 1000); })(); var d = new Date()
+                    var time = d.getHours()
+                    if (time < 24) { HTML = "(¦3[▓▓])困觉困觉"; } if (time < 22) { HTML = "晚上,辛勤的一天过去了`▽´๑)۶"; } if (time < 18) { HTML = "ฅ(*ﾟ▽ﾟ*)ฅ下午摸个鱼可以理解吧"; } if (time < 12) { HTML = "( >_＜。)早啊,被迫营业ing"; } if (time < 8) { HTML = "清晨,还能再睡会(´Д｀ﾟ)ﾟ"; } if (time < 7) { HTML = "｡ﾟ(ﾟ-_–ﾟ)ﾟ｡睡的很安详"; } document.title = HTML;
+                    function getBingWallpaper(resp) {
+                        const url = 'https://cn.bing.com' + resp.images[0].url
+                        const bodyEl = document.querySelector('body')
+                        bodyEl.style.backgroundImage = `url(${url})`
+                    }
+                </script>
+                <script src="https://bing-wallpaper-jsonp.herokuapp.com/?format=js&callback=getBingWallpaper"></script>
+
+
+
+                <!-- 以上是用户HTML -->
+                <form onsubmit="return search()" class="search_bar" title="搜索"><button onclick="search()"
+                        id="search_submit" value="" aria-label="搜索">
+                        <div class="search icon"></div>
+                    </button><span><input class="search" onfocus="showButton()" onblur="hideButton()" type="text"
+                            value="" autocomplete="off" id="search_input" title="搜索"></span></form>
+        </div>
+        <div id="bookmark_part">
+            <div id="box_container">
+                <div class="box">
+                    <p class="title" aria-hidden="true">v</p>
+                    <div class="overlay"
+                        style="background: url('./icon/via-app.cn.png') no-repeat;background-size: cover;background-position:center center;">
+                    </div>
+                    <p class="url" aria-hidden="true">via轻插件</p><a href="http://via-app.cn/#/tabBar/home"
+                        title="via轻插件"></a>
+                </div>
+                <div class="box">
+                    <p class="title" aria-hidden="true">网</p>
+                    <div class="overlay"
+                        style="background: url('./icon/youdao.com.png') no-repeat;background-size: cover;background-position:center center;">
+                    </div>
+                    <p class="url" aria-hidden="true">网易有道</p><a href="https://youdao.com/m/" title="网易有道"></a>
+                </div>
+                <div class="box">
+                    <p class="title" aria-hidden="true">咪</p>
+                    <div class="overlay"
+                        style="background: url('./icon/m.music.migu.cn.png') no-repeat;background-size: cover;background-position:center center;">
+                    </div>
+                    <p class="url" aria-hidden="true">咪咕音乐</p><a href="https://m.music.migu.cn/v4/" title="咪咕音乐"></a>
+                </div>
+                <div class="box">
+                    <p class="title" aria-hidden="true">G</p>
+                    <div class="overlay"
+                        style="background: url('./icon/greasyfork.org.png') no-repeat;background-size: cover;background-position:center center;">
+                    </div>
+                    <p class="url" aria-hidden="true">Greasy Fork - 安全、实用的用户脚本大全</p><a
+                        href="https://greasyfork.org/zh-CN" title="Greasy Fork - 安全、实用的用户脚本大全"></a>
+                </div>
+                <div class="box">
+                    <p class="title" aria-hidden="true">V</p>
+                    <div class="overlay"
+                        style="background: url('./icon/leftshine.gitee.io.png') no-repeat;background-size: cover;background-position:center center;">
+                    </div>
+                    <p class="url" aria-hidden="true">Via首页收集</p><a href="https://leftshine.gitee.io/viaindex/"
+                        title="Via首页收集"></a>
+                </div>
+                <div class="box">
+                    <p class="title" aria-hidden="true">青</p>
+                    <div class="overlay"
+                        style="background: url('./icon/limestart.cn.png') no-repeat;background-size: cover;background-position:center center;">
+                    </div>
+                    <p class="url" aria-hidden="true">青柠起始页</p><a href="https://limestart.cn/" title="青柠起始页"></a>
+                </div>
+            </div>
+        </div>
+        <script
+            type="text/javascript">function showButton() { document.getElementById("search_submit").style.display = "block" } function hideButton() { var a = document.getElementById("search_input").value; "" == a && (document.getElementById("search_submit").style.display = "none") } function search() { var a = document.getElementById("search_input").value; return "" != a && (window.via.searchText(a), document.getElementById("search_input").value = ""), !1 }</script>
+        <script charset="gbk" src="./js.js"></script>
+        <script
+            type="text/javascript">function show(str) { var searchbox = document.getElementById("search_input"); searchbox.innerHTML = str; searchbox.blur(); search(); } var params = { "XOffset": 0, "YOffset": 0, "fontColor": "#666666", "fontColorHI": "#FFF", "fontSize": "14px", "borderColor": "#eee", "bgcolorHI": "#7B90E3", "sugSubmit": false }; BaiduSuggestion.bind("search_input", params, show); </script>
+    </div>
+</body>
